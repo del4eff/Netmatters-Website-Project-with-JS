@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/del4eff/Netmatters-Website-Project-with-JS/issues"
   },
-  "homepage": "https://github.com/del4eff/Netmatters-Website-Project-with-JS#readme"
+  "homepage": "https://github.com/del4eff/Netmatters-Website-Project-with-JS#readme",
+  "dependencies": {
+    "owl.carousel": "^2.3.4"
+  }
 }
