@@ -1,0 +1,241 @@
+// Brand Message
+
+.brand-background {
+    background-color:$background;
+    color: #fff;
+    line-height: 1.75rem;
+    h1 {
+        font-size: 2.25rem;
+        font-weight: 400;
+        margin: 0 0 28px;
+        text-transform: uppercase;
+        margin-top: -6px;
+    }
+    img {
+        height: 1.5em;
+    }
+}
+
+// Latest Articles
+
+
+
+.bar {
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,.1);
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            float: left;
+            width: 4.5rem;
+            span {
+                display: block;
+                position: relative;
+                line-height: 1.75rem;
+                font-size: 1.125rem;
+                font-weight: 600;
+                margin-left: 0;
+                padding: 2.5rem 0;
+                color: $background;
+                &::after {                  //This will display a bar after the span element
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: #333645;
+                    height: 5px;
+                } 
+            }     
+        }
+    }
+    ul::before,
+    ul::after {
+    content: "";
+    display: table;
+    }
+    ul::after {
+        content: "";
+        clear: both;
+    }
+}
+                // Articles List
+
+.latest-articles {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 35px;
+}
+
+.article-list {
+    .item {
+        font-size: .8125rem;
+        .btn {            
+            color: #fff;
+            &:hover {
+                color: #fff;
+                background-color: filter(75%);
+            }
+        }
+        .tool-tip {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: #fff;
+            background-color: #333645;
+            font-size: .875rem;
+            padding: 0 10px;
+            line-height: 1.25rem;
+            text-transform: uppercase;
+            z-index: 10;
+            .description {                  //Description is hidden by default
+                position: absolute;
+                visibility: hidden;
+                width: 200px;
+                height: 50px;
+                bottom: 140%;
+                right: -60px;
+                opacity: 0;
+                .box {
+                    background-color: #333645;
+                    color: #fff;
+                    height: 50px;
+                    padding: 5px 10px;
+                    p {
+                        display: inline-block;
+                        height: 50px;
+                        max-height: 50px;
+                        text-align: center;
+                        text-transform: initial;
+                    }
+                    .arrow {
+                        position: absolute;                  //This will display the arrow pointing to the logos
+                        top: 83%;
+                        left: 50%;
+                        &:after {
+                            content: "";
+                            margin: auto;
+                            display: inline-block;
+                            border-color: $background transparent transparent;
+                            border-style: solid;
+                            border-width: 7px 7px 0;
+                        }
+                    }
+                }
+            }
+            &:hover {
+                .description {
+                    visibility: visible;
+                    opacity: 90%;
+                    transition: opacity .3s;
+                }
+                a {
+                    text-decoration: underline;
+                }
+            }
+            a {
+                color: #fff;
+            }
+        }
+        .img-container {
+            position: relative;
+            overflow: hidden;
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                    opacity: .7;
+                }
+            }
+            img {
+                display: block;
+                width: 100%;
+                border: 1px solid #ccc;
+                border-radius: 3px 3px 0 0;
+                position: relative;
+                transition: transform .2s, opacity .2s;
+            }
+        }
+        .block {
+            border: 1px solid #ccc;
+            border-top: 0;
+            border-radius: 3px;
+            padding: 1.875rem;
+            :not(.top) {
+                border-top: 0;
+                border-radius: 0 0 3px 3px;
+            }
+            h3 {
+                font-size: 1rem;
+                line-height: 1.5rem;
+                a {
+                color: #333645;
+                text-transform: none;
+                font-weight: 600;
+                }
+            }
+            p {
+                font-size: .8125rem;
+                line-height: 1.375rem;
+            }
+            .btn {
+                border: 1px solid transparent;
+                border-radius: 3px;
+            }
+            .post {
+                display: table;
+                width: 100%;
+                font-size: .875rem;
+                margin-top: 30px;
+                padding-top: 30px;
+                border-top: 1px solid #ccc;
+                >* {
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+                .avatar {
+                    img {
+                        max-width: 50px;
+                    }
+                }
+                .details p {
+                    padding-left: 20px;
+                    line-height: .5rem;
+                    margin-bottom: 0;
+                    strong {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+    
+    .telecoms {
+        .block {
+            h3 {
+                a {
+                    color:$telecoms;
+                }
+            }
+            .btn:hover {
+                background-color: $telecoms-dark;
+            }
+        }
+        .tool-tip,
+        .block .btn {
+            background-color: $telecoms;
+        }
+    }
+    .web {
+        .tool-tip,
+        .block .btn {
+            background-color: $web;
+        }
+        .block {
+            h3 a {
+            color:$web;
+            }
+            .btn:hover {
+                background-color: $web-dark;
+            }
+        }
+    }
+}

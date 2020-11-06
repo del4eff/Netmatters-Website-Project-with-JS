@@ -1,0 +1,171 @@
+/*--- Main Navigation ---*/
+
+.main-navigation {
+    padding: 0;
+    margin: 0;
+    background-color: #333645;
+    .container  ul {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        border-right: 1px solid hsla(0, 0%, 100%, .1);
+        border-left: 1px solid rgba(0,0,0,.25);
+        > li {
+            flex: 1;
+            text-align: center;
+            border-left: 1px solid hsla(0, 0%, 100%, .1);
+            border-right: 1px solid rgba(0,0,0,.25);
+            > a {
+                position: relative;
+                display: block;
+                color: #fff;
+                padding: 1.1875rem 0 1.125rem;
+                text-transform: uppercase;
+                font-size: 1.125rem;
+                line-height: 1;
+                &:hover {
+                    text-decoration: none;
+                }
+                svg {
+                    font-size: 1.438rem;
+                    padding-bottom: .625rem;
+                    margin: 0 auto;
+                    height: 2rem;
+                    width: 2rem;
+                    justify-content: center;
+                }
+                small {
+                    display: block;
+                    font-size: .625rem;
+                    padding-bottom: 1px;
+                }
+            }
+        }
+        .pop-out {                                                //Setting up the list items and hiding them
+            padding: 0;
+            margin: 0;
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: -1px;
+            right: -1px;
+            z-index: 10;
+            list-style: none;
+            &:hover {                                            //
+                display: block;                                         //
+            }        
+            > li {
+                float: left;
+                border: none;
+                text-align: left;
+                > a {
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-size: .925rem;
+                    text-decoration: none;
+                    letter-spacing: .4px;
+                    display: block;
+                    line-height: .5rem;
+                }
+            }
+            li:not(:last-child) {                                    //This will display a hyphen between list items
+                a:after {
+                    content: "-";
+                    padding-left: 1.75rem;
+                    padding-right: 1.75rem;
+                }
+            }
+        }
+        .tab:hover ~ .pop-out {                                     //This will display the list items for each navigation item
+            display: block;                                         //
+        } 
+    }
+    
+    .web,
+    .it,
+    .telecoms,
+    .bespoke,
+    .marketing,
+    .security {
+        &:hover {                                                //Setting up the on hover behaviour of list items
+            svg {
+                fill: #fff;
+            }    
+            .pop-out {
+                &::before,
+                &::after {
+                content: "";
+                width: 125rem;
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                }
+            }
+            .pop-out {                
+                &::before {
+                    right: 100%;
+                }
+                &::after {
+                    left: 100%;
+                }
+            }
+        }
+    }
+    .web:hover {                                               //Setting up the on hover behaviour of individual list items
+        background-color: $web;
+        .pop-out,
+        .pop-out::before,
+        .pop-out::after {
+            background-color: $web-dark;
+        }
+    }
+
+    .it:hover {
+        background-color: $it;
+        .pop-out,
+        .pop-out::before,
+        .pop-out::after {
+            background-color: $it-dark;
+        }
+    }
+
+    .telecoms:hover {
+        background-color: $telecoms;
+        .pop-out,
+        .pop-out::before,
+        .pop-out::after {
+            background-color:$telecoms-dark;
+        }
+    }
+
+    .bespoke:hover {
+        background-color: $bespoke;
+        .pop-out,
+        .pop-out::before,
+        .pop-out::after {
+            background-color: $bespoke-dark;
+        }
+    }
+
+    .marketing:hover {
+        background-color: $marketing;
+        .pop-out,
+        .pop-out::before,
+        .pop-out::after {
+            background-color: $marketing-dark;
+        }
+    }
+
+    .security:hover {
+        background-color: $security;
+        .pop-out,
+        .pop-out::before,
+        .pop-out::after {
+            background-color:$security-dark;
+        }
+    }
+}

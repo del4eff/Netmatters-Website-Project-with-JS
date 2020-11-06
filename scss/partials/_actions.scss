@@ -1,0 +1,127 @@
+/*--- Actions Menu ---*/
+.logo {
+    img {
+        width: 100%;
+    }
+}
+
+.actions {
+    display: flex;
+    padding: 7px 0;
+    > * + * {
+        margin-left: 20px;
+    }
+    a {
+        width: 100%;
+    }
+    svg:not(.bi-search) {
+        margin: 8px 12px 0 -4px;
+    }
+    .btn,
+    .form-control {
+        height: 3.5rem;
+        line-height: 2.875rem;
+        font-size: 1.125rem;
+    }
+    .btn-secondary {
+        background-color: #999aa2;
+        border-color: #999aa2;
+        &:hover {
+            background-color: #7e808a;
+            border-color: #7e808a;
+        }
+    }
+    .input-group-append {
+        .btn {
+            background-color: #999aa2;
+            border-color: #999aa2;
+            svg {
+                margin: 0 0 5px 0;
+            }
+            &:hover {
+                background-color:#7e808a;
+                border-color: #7e808a;
+            }
+        }
+    }
+    
+    .burger {
+        position: relative;
+        background: $background;
+        height: 3.5rem;
+        z-index: 1;
+        border-radius: 3px;
+        &:hover {
+            background-color: #22242e;
+            border-color: #191a22;
+        }
+        #text {
+            color: #fff;
+            font-size: .7rem;
+            line-height: 1rem;
+            width: 2.125rem;
+            margin-top: .5rem;
+            text-transform: uppercase;
+        }
+        input {
+            display: block;
+            width: 3.75rem;
+            height: 3.5rem;
+            right: -.05rem;
+            bottom: -.05rem;
+            position: absolute;
+            cursor: pointer;
+            opacity: 0;
+            z-index: 2;        
+        }
+        span {
+            display: block;
+            width: 2.125rem;
+            height: 3px;
+            top: .25rem;
+            margin-bottom: 5px;
+            position: relative;
+            background: #fff;
+            border-radius: 3px;
+            z-index: 1;
+        }
+    }
+}
+
+.inner > .container > .row {
+    flex-wrap: nowrap;
+    height: auto;
+    width: 100%;
+    .mobile svg {
+        fill: #22242e;
+    }
+}
+
+header .search-mobile {
+    > .search-form {
+        margin-top: 11px;
+        position: relative;
+    }
+    .form-control {
+        display: inline-block;
+        background-color: rgba(0,0,0,.1);
+        outline: 1px solid hsla(0,0%,100%,.2);
+        border: 2px solid rgba(0,0,0,.1);
+        transition: none;
+        width: 100%;
+        padding-right: 40px;
+        height: 47px;
+        padding: 5px 15px;
+    }
+    svg {
+        background: none;
+        border: none;
+        color: $background;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        line-height: 47px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}

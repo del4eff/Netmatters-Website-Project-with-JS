@@ -1,0 +1,39 @@
+/*--- Accreditations ---*/
+
+.accreditations {
+    padding: 50px 0;
+    text-align: center;
+    .list {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        height: 88px;
+        .item {
+            flex-grow: 1;
+            vertical-align: middle;
+            padding: 0 20px;
+            position: relative;
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            .coloured {                     //coloured image is hidden by default
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+        }
+        .item:hover {
+            .greyscale {                    //This will hide the greyscale image
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            .coloured {                     //This will show the coloured image
+                position: relative;
+                top: 0px;
+                left: 0px;
+            }
+        }
+    }
+}

@@ -1,0 +1,216 @@
+// Service list
+
+
+.service-list {
+    .col-lg-6 {
+        width: 50%;
+    }
+    .block {
+        display: block;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin-bottom: 30px;
+        padding: 30px;
+        box-shadow: 0 3px 35px rgba(0,0,0,.1);
+        h2 {
+            font-size: 1.125rem;
+            text-transform: capitalize;
+            position: relative;
+            padding-bottom: 17px;
+            margin: 0 0 11px;
+            &::after {                  //This will display a bar after the h2 element
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 28px;
+                height: 3px;
+                display: block;
+                background-color: $background;
+            }
+        }
+        p {
+            font-size: .8125rem;
+            line-height: 1.375rem;
+            margin-bottom: 13px;
+            font-weight: 400;
+            text-transform: none;
+        }
+        .icons {
+            display: block;
+            height: 60px;
+            width: 60px;
+            margin: 0 auto 17px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            line-height: 3.625rem;    
+            svg {
+                fill: #fff;
+                height: 1.5rem;
+                width: 1.5rem;    
+            }
+        }
+        .btn-software {
+            color: #fff;
+            text-transform: uppercase;
+            transition: none;
+        }
+    }
+    .block:hover {                              //Changing the bar colour to white on hover
+        h2::after {
+            background-color: #fff;
+        }
+    }
+    .web {                                     //Setting up the individual list items background colour
+        .icons,
+        .btn-software {
+        background-color: $web;
+        }
+    }
+    .it {
+        .icons,
+        .btn-software {
+        background-color: $it;
+        }
+    }
+    .telecoms {
+        .icons,
+        .btn-software {
+        background-color: $telecoms;
+        }
+    }
+    .bespoke {
+        .icons,
+        .btn-software {
+        background-color: $bespoke;
+        }
+    }
+    .marketing {
+        .icons,
+        .btn-software {
+        background-color: $marketing;
+        }
+    }
+    .security {
+        .icons,
+        .btn-software {
+        background-color: $security;
+        }
+    }
+    .web:hover {                                     //Setting up the on hover behaviour of individual list items
+        background-color: $web;
+        text-decoration: none;
+        color: #fff;
+        h2 {
+            color: #fff;
+        }
+        .btn-software {
+            color: $web;
+            background-color: #fff;
+            border-color: #fff;
+        }
+        .icons {
+            background-color: #fff;
+        }
+        svg {
+            fill: $web;
+        }
+    }
+    .it:hover {
+        background-color: $it;
+        text-decoration: none;
+        color: #fff;
+        h2 {
+            color: #fff;
+        }
+        .btn-software {
+            color: $it;
+            background-color: #fff;
+            border-color: #fff;
+        }
+        .icons {
+            background-color: #fff;
+        }
+        svg {
+            fill: $it;
+        }
+    }
+    .telecoms:hover {
+        background-color: $telecoms;
+        text-decoration: none;
+        color: #fff;
+        h2 {
+            color: #fff;
+        }
+        .btn-software {
+            color: $telecoms;
+            background-color: #fff;
+            border-color: #fff;
+        }
+        .icons {
+            background-color: #fff;
+        }
+        svg {
+            fill: $telecoms;
+        }
+    }
+    .bespoke:hover {
+        background-color: $bespoke;
+        text-decoration: none;
+        color: #fff;
+        h2 {
+            color: #fff;
+        }
+        .btn-software {
+            color: $bespoke;
+            background-color: #fff;
+            border-color: #fff;
+        }
+        .icons {
+            background-color: #fff;
+        }
+        svg {
+            fill: $bespoke;
+        }
+    }
+    .marketing:hover {
+        background-color: $marketing;
+        text-decoration: none;
+        color: #fff;
+        h2 {
+            color: #fff;
+        }
+        .btn-software {
+            color: $marketing;
+            background-color: #fff;
+            border-color: #fff;
+        }
+        .icons {
+            background-color: #fff;
+        }
+        svg {
+            fill: $marketing;
+        }
+    }
+    .security:hover {
+        background-color: $security;
+        text-decoration: none;
+        color: #fff;
+        h2 {
+            color: #fff;
+        }
+        .btn-software {
+            color: $security;
+            background-color: #fff;
+            border-color: #fff;
+        }
+        .icons {
+            background-color: #fff;
+        }
+        svg {
+            fill: $security;
+        }
+    }
+}

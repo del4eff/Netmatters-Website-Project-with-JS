@@ -1,0 +1,95 @@
+// Clients List
+
+.clients .container .list {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    .item {
+        flex-grow: 1;
+        vertical-align: middle;
+        padding: 0 20px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:hover {                       //This will hide the greyscale image and display the coloured one
+            .description {              //and show the discription and coloured image on top of the image
+                visibility: visible;
+                position: absolute;
+            }
+            .greyscale {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            .coloured {
+                position: relative;
+                top: 0px;
+                left: 0px;
+            }
+        }
+        .description {                  //Description is hidden by default
+            position: absolute;
+            visibility: hidden;
+            bottom: 100%;
+            .box {
+                background-color: #333645;
+                color: #fff;
+                padding: 20px;
+                font-size: .875rem;
+                width: 260px;
+                height: 160px;
+                margin: 0 auto 50px;
+                h3 {
+                    position: relative;
+                    font-size: 1.125rem;
+                    color: #fff;
+                    padding-bottom: 17px;
+                    margin: 0 0 11px;
+                    &::after {                  //This will display a bar after the h3 element
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        width: 28px;
+                        height: 3px;
+                        display: block;
+                        background-color: #fff;
+                    }
+                }
+                p {
+                    font-size: .8125rem;
+                    margin-bottom: 0;
+                }
+                .arrow {
+                    position: absolute;                  //This will display the arrow pointing to the logos
+                    height: 40px;
+                    width: 72px;
+                    top: 74%;
+                    left: 50%;
+                    margin-left: -36px;
+                    z-index: 10;
+                    &:after {
+                        content: "";
+                        margin: auto;
+                        display: inline-block;
+                        border-color: $background transparent transparent;
+                        border-style: solid;
+                        border-width: 35px 36px 0;
+                    }
+                }
+            }
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .coloured {                     //Coloured image is hidden by default
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+    }
+}

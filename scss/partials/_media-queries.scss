@@ -1,0 +1,176 @@
+//  Media queries
+
+@media (max-width: 576px) {
+    .service-list {
+        max-width: 550px;
+        .row {
+            display: flex;
+            flex-direction: column;
+            .col-lg-6 {
+                width: 100%;                //Forcing the columns in the service list to take the remaining width in very small screens
+            }
+        }
+    }
+    #banner .content {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    #banner {
+        text-align: center;
+    }
+    header .inner .row {
+        display: table;
+        width: 100%;
+        margin: 0;
+        > * {
+        padding: 0;
+        display: table-cell;
+        float: none;
+        vertical-align: middle;
+        width: 100%;
+        }
+        > &:last-child {
+            width: 1%;
+        }
+    }
+    .actions .input-group {
+        display: none;
+    }
+    .brand-background .row {
+        line-height: 2rem;
+    }
+    .clients {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+    .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-12 {
+        float: left;
+    }
+    .article-list .item .block h3 {
+        min-height: 3rem;                       //giving the list items h3 a min height so they dispaly at equal height
+    }
+    .search-mobile {
+        display: none;
+    }
+    .inner .container .row .mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 750px;
+    }
+    .visible-sm {
+        display: block!important;
+    }
+}
+
+@media (max-width: 991px) {
+    #banner {
+        text-align: center;
+    }
+    .col-sm-12,
+    .col-md-12,
+    .col-lg-6 {
+        margin-bottom: 20px;
+    }
+    .mobile {
+        svg {
+            font-size: 32px;
+            margin-left: 15px;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+    .brand-background {                             //setting up the brand background
+        background-image: url('/images/brand-background.png');
+        background-repeat: no-repeat;
+        background-position: 100%;
+        background-size: auto 100%;
+    }
+    .article-list .item p {                     //giving the list items paragraph a min height so they dispaly at equal height
+        min-height: 66px;
+    }
+}
+
+// @media (min-width: 1200px) {
+    
+// }
+
+@media (max-width: 1260px) and (min-width: 1200px) {
+    .service-list .row .col-xl-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        width: 50%;
+    }
+    .article-list .row .col-xl-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        width: 50%;
+    }
+}
+
+@media (min-width: 1260px) {
+    .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-12,
+    .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-6, .col-lg-8, .col-lg-10, .col-lg-11, .col-lg-12 {
+        float: left;
+    }
+    .container {
+        max-width: 1200px;
+        width: 1200px;
+    }
+    .actions {
+        width: 94%;                     //adjusting the actions menu to match the original webpage
+        .input-group {              //giving the serach field a set width after 1260px
+            .form-control {
+                display: block;
+                border-radius: 0;
+                width: 240px;
+            }
+        }
+    }
+    .clients .list .item {
+        height: auto;
+        width: 100%;                        //giving the list items height and width to take up all the space
+    }
+    .accreditations .list .item {
+        height: auto;
+        width: 100%;
+    }
+    .article-list .row .col-xl-4 {
+        display: block!important;
+    }
+}
+
+@media (max-width: 1260px) and (min-width: 992px) {
+    .input-group {
+        width: 56px;
+        .form-control {
+            display: none;
+        }
+        > .input-group-append > .btn {
+        border-radius: 3px 3px 3px 3px;
+        }
+    }
+    #banner {
+        text-align: left;
+    }
+}
